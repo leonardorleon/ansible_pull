@@ -1,0 +1,8 @@
+- hosts: localhost # For this purpose, no need for inventory
+  connection: local # For local instead of SSH
+  become : true # To execute as root
+
+  tasks:
+  - name: Install htop
+  apt:
+    name: htop
