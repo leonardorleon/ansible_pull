@@ -10,10 +10,6 @@
       apt:
         update_cache: yes
       changed_when: False
-    - name: install git
-      apt:
-        name:
-          - git
 
-  # tasks:
-  #   - include: tasks/packages.yml
+  tasks:
+    - include: tasks/packages.yml
