@@ -1,6 +1,9 @@
-- hosts: localhost # For this purpose, no need for inventory
-  connection: local # For local instead of SSH
-  become: true # To execute as root
+# For this purpose, no need for inventory
+- hosts: localhost 
+  # For local instead of SSH
+  connection: local 
+  # To execute as root
+  become: true 
 
   tasks:
   - name: Install htop
