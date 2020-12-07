@@ -3,7 +3,8 @@
 Repository for various automated tasks using ansible.
 
 NOTES:
--change it such that it works with a private git repository
+-Git must be installed
+-Currently it works on a public repository. Change it such that it works with a private git repository
 
 ## Steps on IoT devices
 

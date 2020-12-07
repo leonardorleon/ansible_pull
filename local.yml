@@ -1,11 +1,19 @@
 # For this purpose, no need for inventory
-- hosts: localhost 
+- hosts: localhost
   # For local instead of SSH
-  connection: local 
+  connection: local
   # To execute as root
-  become: true 
+  become: true
 
-  tasks:
-  - name: Install htop
-    apt:
-      name: htop
+  pre_tasks:
+    - name: update repositories
+      apt:
+        update_cache: yes
+      changed_when: False
+    - name: install git
+      apt:
+        name:
+          - git
+
+  # tasks:
+  #   - include: tasks/packages.yml
