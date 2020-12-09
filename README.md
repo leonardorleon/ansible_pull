@@ -39,3 +39,7 @@ For now it takes the ouput to /dev/null, maybe it will be changed to a log file 
 * packages.yml
 
 This will install a few selected packages.
+
+* zabbix.yml
+
+With this play the zabbix agent can get the desired configuration from the files directory.

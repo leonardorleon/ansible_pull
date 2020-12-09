@@ -1,0 +1,7 @@
+- name: configure zabbix agent
+  copy:
+    src: zabbix_configuration.conf # files directory is assumed
+    dest: /etc/zabbix/zabbix_agentd.conf
+    owner: root
+    group: root
+    mode: 755
