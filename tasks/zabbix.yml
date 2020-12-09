@@ -4,4 +4,4 @@
     dest: /etc/zabbix/zabbix_agentd.conf
     owner: root
     group: root
-    mode: 755
+    mode: 0755
