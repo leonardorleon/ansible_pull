@@ -5,3 +5,9 @@
     owner: root
     group: root
     mode: 0755
+
+- name: start zabbix agent
+  service: 
+    name: zabbix-agent
+    state: started
+    enabled: yes
