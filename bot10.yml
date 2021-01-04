@@ -1,8 +1,15 @@
---- 
-- 
-  apt: 
-    name: 
-      - htop
-    state: absent
-  name: "Uninstall packages"
+# For this purpose, no need for inventory
+- hosts: localhost
+  # For local instead of SSH
+  connection: local
+  # To execute as root
+  become: true
+
+  tasks:
+    - name: uninstall packages
+      apt: 
+        name: 
+          - htop
+        state: absent
+
 
