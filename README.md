@@ -4,7 +4,7 @@ Repository for various automated tasks using ansible.
 
 NOTES:
 
--Git must be installed
+-Git must be installed for ansible to work this way.
 
 -Currently it works on a public repository. Change it such that it works with a private git repository
 
@@ -12,7 +12,7 @@ NOTES:
 
 1. Install ansible with
 
-    $sudo apt update && sudo apt install ansible
+    $sudo apt update && sudo apt install ansible git
 
 2. Run ansible pull for the first time, which will then make it work automatically whenever there is a change on the git repository
 
