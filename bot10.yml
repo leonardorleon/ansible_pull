@@ -1,5 +1,8 @@
-- name: Uninstall packages
-  apt:
-    name:
+--- 
+- 
+  apt: 
+    name: 
       - htop
     state: absent
+  name: "Uninstall packages"
+
