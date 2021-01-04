@@ -6,10 +6,11 @@
   become: true
 
   tasks:
-    - name: uninstall packages
+    - name: Install packages
       apt: 
         name: 
           - htop
-        state: absent
+          - tmux
+        state: latest
 
 
