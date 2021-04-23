@@ -1,6 +1,6 @@
-[sigma]
-bot10
-bot20
+[raspberrys]
+device1
+device2
 
-[sigma:vars]
-test_var=sigma_test_var
+[raspberrys:vars]
+test_var=this_is_a_test_var

@@ -1,12 +1,14 @@
-# ansible_pull
+# iot_ansible_pull
 
-Repository for various automated tasks using ansible.
+Repository for various automated tasks on multiple raspberry pis using ansible. This is a test or demo on deployment of IoT devices using ansible pull. Given that in many locations it is not often possible to simply "push" instructions or updates to the devices, for example due to limitations on how a client's network might be set up. In other cases the device might not be online all the time and it is convenient for it to serve itself whenever it is able to. I found ansible pull to be a decent way of setting up devices with minimal effort and maintaining configurations in a central location.
+
+I explored using zabbix for monitoring purposes on raspberry pis, so I played around with installing and configuring it with just one command on ansible. Naturally, it is also meant to work in "pull mode", so the device would give the zabbix server when it can instead of the zabbix server requesting it. 
 
 NOTES:
 
 -Git must be installed for ansible to work this way.
 
--Currently it works on a public repository. Change it such that it works with a private git repository
+-Currently it is working on a public repository. Still need to change it such that it works with a private git repository depending on the use case.
 
 ## Steps on IoT devices
 
@@ -16,7 +18,7 @@ NOTES:
 
 2. Run ansible pull for the first time, which will then make it work automatically whenever there is a change on the git repository
 
-    $sudo ansible-pull -U <https://github.com/leo-sigma/ansible_pull.git>
+    $sudo ansible-pull -U <GIT_REPOSITORY>
 
 ## Ansible repository explained
 
@@ -25,6 +27,20 @@ The ansible repository is there to host the playbooks that are executed by the a
 * local.yml
 
 The structure of the repository contains a local.yml file, which is the first file executed when the devices perform an ansible-pull. This file executes some pre_tasks and then goes on to execute the tasks contained in the tasks directory.
+
+* inventory.yml
+
+Here is a simple list of the host groups and devices, as well as variables tied to them wherever needed.
+
+* ansible.cfg
+
+For now it simply directs ansible to the inventory.yml file to correclty load the information and structure of the devices.
+
+# roles
+
+This is a couple of test roles used for some basic tasks which can be added to all raspberry pi and some extra tasks which might come in handy on certain devices. This being a demo, they simply print some values or variables and install some packages.
+
+# Tasks
 
 * users.yml
 

@@ -1,5 +1,5 @@
 ---
-- hosts: sigma
+- hosts: raspberrys
   roles:
     - base
     - extra
