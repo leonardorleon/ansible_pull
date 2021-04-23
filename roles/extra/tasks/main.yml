@@ -1,0 +1,9 @@
+- name: testing extra role capacity
+  debug: 
+    msg: THIS IS BEING PRINTED THROUGH THE EXTRA ROLE
+
+- name: installing tmux
+  apt:
+    name:
+      - tmux
+    state: latest

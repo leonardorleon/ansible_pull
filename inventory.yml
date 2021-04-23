@@ -1,0 +1,6 @@
+[sigma]
+bot10
+bot20
+
+[sigma:vars]
+test_var=sigma_test_var
