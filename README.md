@@ -8,7 +8,7 @@ NOTES:
 
 -Git must be installed for ansible to work this way.
 
--Currently it is working on a public repository. Still need to change it such that it works with a private git repository depending on the use case.
+-Currently it is working on a public repository. Depending on the use case it should be changed to work on a private git repo.
 
 ## Steps on IoT devices
 
@@ -38,7 +38,7 @@ For now it simply directs ansible to the inventory.yml file to correclty load th
 
 # roles
 
-This is a couple of test roles used for some basic tasks which can be added to all raspberry pi and some extra tasks which might come in handy on certain devices. This being a demo, they simply print some values or variables and install some packages.
+This directory holds a couple of test roles used for some basic tasks which can be added to all raspberry pi and some extra tasks which might come in handy on certain devices. This being a demo, they simply print some values or variables and install some packages.
 
 # Tasks
 
